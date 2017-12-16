@@ -1,0 +1,25 @@
+package console
+
+import "testing"
+
+func TestLog(t *testing.T) {
+	type args struct {
+		pattern string
+		vars    []interface{}
+	}
+	tests := []struct {
+		name string
+		args args
+		want string
+	}{
+		{"stringtest", args{"%s", []interface{}{"stringtest"}}, "stringtest"},
+		{"stringstest", args{"%s %s", []interface{}{"string1", "string2"}}, "string1 string2"},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := Log(tt.args.pattern, tt.args.vars...); got != tt.want {
+				t.Errorf("Log() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
