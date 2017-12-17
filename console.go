@@ -7,8 +7,8 @@ import (
 
 //LogMode Use this to trun off or on Logs
 var (
-	LogMode   bool
-	ErrorMode bool
+	LogMode   = true
+	ErrorMode = true
 )
 
 //Log use as console.log(pattern,vars...) return a string

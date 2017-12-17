@@ -12,10 +12,10 @@ In your Application use the familiar console.Log ...Just remember that the L is 
 ```go
 comment:="Awsome!"
 dude:="Julian Frank"
-console.Log("This is %s Code by %s",comment,dude)
+console.Log("This comment (%s) was made by %s",comment,dude)
 
-mylog:=console.Log("This is %s Code by %s",comment,dude)
-//Output mylog=> "This is Awsome Code by Julian Frank"
+mylog:=console.Log("This comment (%s) was made by %s",comment,dude)
+//Output mylog=> "This comment (Awsome!) was made by Julian Frank"
 ```
 
 ### Error
@@ -23,9 +23,22 @@ In your Application use the familiar console.Error ...Just remember that the E i
 ```go
 comment:="Awsome!"
 dude:="Julian Frank"
-myError:=console.Error("This is %s Code by %s",comment,dude)
-//Output myError=> "This is Awsome Code by Julian Frank" of type error
+myError:=console.Error("This comment (%s) was made by %s")
+//Output myError=> "This comment (Awsome!) was made by Julian Frank" 
+//of type error
 //Use err.Error() to retreive error string 
+```
+
+### Console Display Flags 
+If You want to selectively enable or disable console display of Log or Error you can simply do that by setting console.LogMode and console.ErrorMode to true or false. True is default
+```go
+//To make screen completely quiet
+console.LogMode=false
+console.ErrorMode=false
+
+//To Display only errors and not the Logs
+console.LogMode=false
+console.ErrorMode=true
 ```
 
 ## License
