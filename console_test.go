@@ -33,6 +33,7 @@ dude:="Julian Frank"
 console.Log("This comment (%s) was made by %s",comment,dude)
 
 mylog:=console.Log("This comment (%s) was made by %s",comment,dude)
+	// Output: This comment (Awsome!) was made by Julian Frank
 }
 
 func TestError(t *testing.T) {
