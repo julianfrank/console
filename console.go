@@ -6,11 +6,10 @@ import (
 	"log"
 )
 
-
 var (
 	//LogMode Use this to turn Log output to console off or on
-	LogMode   = true
-	//LogMode Use this to turn Error output to console off or on
+	LogMode = true
+	//ErrorMode Use this to turn Error output to console off or on
 	ErrorMode = true
 )
 
