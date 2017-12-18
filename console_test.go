@@ -26,12 +26,15 @@ func TestLog(t *testing.T) {
 		})
 	}
 }
-
+//Example for console.Log
 func ExampleLog(){
+	
 	comment:="Awsome!"
 dude:="Julian Frank"
+	
 console.Log("This comment (%s) was made by %s",comment,dude)
-
+// Output: This comment (Awsome!) was made by Julian Frank
+	
 mylog:=console.Log("This comment (%s) was made by %s",comment,dude)
 	// Output: This comment (Awsome!) was made by Julian Frank
 }
