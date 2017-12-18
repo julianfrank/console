@@ -2,6 +2,7 @@ package console
 
 import (
 	"testing"
+	"github.com/julianfrank/console"
 )
 
 func TestLog(t *testing.T) {
@@ -24,6 +25,14 @@ func TestLog(t *testing.T) {
 			}
 		})
 	}
+}
+
+func ExampleLog(){
+	comment:="Awsome!"
+dude:="Julian Frank"
+console.Log("This comment (%s) was made by %s",comment,dude)
+
+mylog:=console.Log("This comment (%s) was made by %s",comment,dude)
 }
 
 func TestError(t *testing.T) {
