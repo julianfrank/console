@@ -1,3 +1,5 @@
+[![GoDoc](https://godoc.org/github.com/julianfrank/console?status.svg)](https://godoc.org/github.com/julianfrank/console)
+
 # console package for those used to JS console.log(...)
 Simple Console Log Package useful for anyone coming from Javascript background
 
