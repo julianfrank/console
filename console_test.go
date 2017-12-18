@@ -61,7 +61,7 @@ func TestError(t *testing.T) {
 	}
 }
 
-ExampleError(){
+func ExampleError(){
 comment:="Awsome!"
 dude:="Julian Frank"
 myError:=console.Error("This comment (%s) was made by %s")
