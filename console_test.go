@@ -33,9 +33,9 @@ func ExampleLog(){
 dude:="Julian Frank"
 	
 console.Log("This comment (%s) was made by %s",comment,dude)
-// Output: This comment (Awsome!) was made by Julian Frank
-	
 mylog:=console.Log("This comment (%s) was made by %s",comment,dude)
+	
+	// Output: This comment (Awsome!) was made by Julian Frank
 	// Output: This comment (Awsome!) was made by Julian Frank
 }
 
