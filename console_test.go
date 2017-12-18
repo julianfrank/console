@@ -65,5 +65,5 @@ func ExampleError(){
 comment:="Awsome!"
 dude:="Julian Frank"
 myError:=console.Error("This comment (%s) was made by %s")
-	// Output: "This comment (Awsome!) was made by Julian Frank" 
+	// Output: This comment (Awsome!) was made by Julian Frank
 }
