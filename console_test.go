@@ -1,7 +1,6 @@
 package console
 
 import (
-	//"github.com/julianfrank/console"
 	"testing"
 )
 
@@ -27,19 +26,6 @@ func TestLog(t *testing.T) {
 	}
 }
 
-//Example for console.Log
-/*func ExampleLog() {
-
-	comment := "Awsome!"
-	dude := "Julian Frank"
-
-	console.Log("This comment (%s) was made by %s", comment, dude)
-	mylog := console.Log("This comment (%s) was made by %s", comment, dude)
-
-	// Output: This comment (Awsome!) was made by Julian Frank
-	// This comment (Awsome!) was made by Julian Frank
-}*/
-
 func TestError(t *testing.T) {
 	type args struct {
 		pattern string
@@ -61,11 +47,3 @@ func TestError(t *testing.T) {
 		})
 	}
 }
-
-/*func ExampleError() {
-	comment := "Awsome!"
-	dude := "Julian Frank"
-	myError := console.Error("This comment (%s) was made by %s")
-	// Output: This comment (Awsome!) was made by Julian Frank
-}
-*/
