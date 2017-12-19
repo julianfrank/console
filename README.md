@@ -1,5 +1,5 @@
 [![GoDoc](https://godoc.org/github.com/julianfrank/console?status.svg)](https://godoc.org/github.com/julianfrank/console)
-[![Coverage Status](https://coveralls.io/repos/github/julianfrank/console/badge.svg?branch=master)](https://coveralls.io/github/julianfrank/console?branch=master)
+ [![Coverage Status](https://coveralls.io/repos/github/julianfrank/console/badge.svg?branch=master)](https://coveralls.io/github/julianfrank/console?branch=master) [![Build Status](https://travis-ci.org/julianfrank/console.svg?branch=master)](https://travis-ci.org/julianfrank/console)
 
 # console package for those used to JS console.log(...)
 Simple Console Log Package useful for anyone coming from Javascript background
