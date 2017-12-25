@@ -64,6 +64,7 @@ func TestTimed(t *testing.T) {
 		want string
 	}{
 		{"str1", args{st, "%s", []interface{}{"str1"}}, "str1\t0s"},
+		{"str2", args{st, "%s-%s", []interface{}{"str1", "str2"}}, "str1-str2\t0s"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
