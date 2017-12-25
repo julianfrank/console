@@ -33,16 +33,34 @@ myError:=console.Error("This comment (%s) was made by %s")
 //Use err.Error() to retreive error string 
 ```
 
+
+### Timed
+This tries to replicate what the console timestart/timeend does in JS... it is slightly different... here you will need to record the start time in a variable at the point where you want to start measuring... in the point were you need the measure use 
+console.Timed(<the timedstart variable>,<the pattern>,the variables)
+The elabpsed time will be automatically appended to the pattern with a tab
+```go
+ts:=time.Now()
+console.TimedMode=true
+comment:="Awsome!"
+dude:="Julian Frank"
+console.Timed(ts,"This comment (%s) was made by %s",comment,dude)
+
+mylog:=console.Log(ts,"This comment (%s) was made by %s",comment,dude)
+//Output mylog=> "This comment (Awsome!) was made by Julian Frank    0s"
+```
+
+
 ### Console Display Flags 
 If You want to selectively enable or disable console display of Log or Error you can simply do that by setting console.LogMode and console.ErrorMode to true or false. True is default
 ```go
 //To make screen completely quiet
 console.LogMode=false
 console.ErrorMode=false
-
+console.TimedMode=false
 //To Display only errors and not the Logs
 console.LogMode=false
 console.ErrorMode=true
+console.TimedMode=false
 ```
 
 ## License

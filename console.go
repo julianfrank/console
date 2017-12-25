@@ -4,6 +4,7 @@ package console
 import (
 	"fmt"
 	"log"
+	"time"
 )
 
 var (
@@ -11,6 +12,8 @@ var (
 	LogMode = true
 	//ErrorMode Use this to turn Error output to console off or on
 	ErrorMode = true
+	//TimedMode Use this to turn Timed Output to console off or on
+	TimedMode = true
 )
 
 //Log use as console.log(pattern,vars...) return a string
@@ -31,4 +34,17 @@ func Error(pattern string, vars ...interface{}) error {
 		log.Println(err.Error())
 	}
 	return err
+}
+
+//Timed returns a string object appended with the time elapsed provided from the starttime
+// Usage: console.Timed(starttime,pattern,vars...)
+// Output: returns the formatted string appended with elapsed time and outputs the string to stdio if TimedMode is true
+func Timed(startTime time.Time, pattern string, vars ...interface{}) string {
+	pattern += "\t%s"
+	vars = append(vars, time.Since(startTime))
+	var msg = fmt.Sprintf(pattern, vars...)
+	if TimedMode {
+		fmt.Println(msg)
+	}
+	return msg
 }
