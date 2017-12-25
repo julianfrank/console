@@ -1,6 +1,7 @@
 package console
 
 import (
+	"strings"
 	"testing"
 	"time"
 )
@@ -63,12 +64,12 @@ func TestTimed(t *testing.T) {
 		args args
 		want string
 	}{
-		{"str1", args{st, "%s", []interface{}{"str1"}}, "str1\t0s"},
-		{"str2", args{st, "%s-%s", []interface{}{"str1", "str2"}}, "str1-str2\t0s"},
+		{"str1", args{st, "%s", []interface{}{"str1"}}, "str1"},
+		{"str2", args{st, "%s-%s", []interface{}{"str1", "str2"}}, "str1-str2"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Timed(tt.args.startTime, tt.args.pattern, tt.args.vars...); got != tt.want {
+			if got := Timed(tt.args.startTime, tt.args.pattern, tt.args.vars...); strings.Split(got, "\t")[0] != tt.want {
 				t.Errorf("Timed() = %v, want %v", got, tt.want)
 			}
 		})
